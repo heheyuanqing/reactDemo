@@ -2,11 +2,46 @@ import React,{Component} from 'react';
 
 
 class CommentInput extends Component{
+    constructor(){
+        super();
+        this.state = {
+            usrName:'',
+            content:''
+        };
+    }
+
+    getUsrName(e){
+        this.setState({usrName:e.target.value});
+    }
+    getContent(e){
+        this.setState({content:e.target.value});
+    }
+
+    submit(){
+        if(this.props.onSubmit){
+            var {usrName,content} = this.state;
+            this.props.onSubmit({usrName,content})
+        }
+        this.setState({content:''});
+    }
 
     render(){
         return(
-            <div>
-                <span>用户名</span>
+            <div className="comment">
+               <div className="commentFiled">
+                   <span>用户名&nbsp; &nbsp;&nbsp;：</span>
+                   <div className="usrName">
+                       <input type="text" value={this.state.usrName} onChange={this.getUsrName.bind(this)}/>
+                  </div>
+               </div>
+
+                <div className="commentFiled">
+                    <span>评论内容：</span>
+                    <div className="content">
+                       <textarea value={this.state.content} onChange={this.getContent.bind(this)}/>
+                   </div>
+                </div>
+                <button onClick={this.submit.bind(this)}>submit</button>
             </div>
         )
     }

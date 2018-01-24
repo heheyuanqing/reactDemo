@@ -1,12 +1,12 @@
 import React,{Component} from 'react';
 import Comment from "./comment";
 
-class CommentList extends Component{
+class CommentList extends Component{;
+    static defaultProps = {comments:[]}
     render(){
         return(
             <div>
-                <Comment/>
-                <Comment/>
+                {this.props.comments.map((comment,i)=><Comment comment={comment} key={i}/>)}
             </div>
         )
     }

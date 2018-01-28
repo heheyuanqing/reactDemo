@@ -2,6 +2,9 @@ import React,{Component} from 'react';
 
 
 class CommentInput extends Component{
+   /* static propTypes={
+      submit:propTypes.func
+    };*/
     constructor(){
         super();
         this.state = {
@@ -25,6 +28,10 @@ class CommentInput extends Component{
         this.setState({content:''});
     }
 
+    componentDidMount(){
+        this.textarea.focus();
+    }
+
     render(){
         return(
             <div className="comment">
@@ -38,7 +45,7 @@ class CommentInput extends Component{
                 <div className="commentFiled">
                     <span>评论内容：</span>
                     <div className="content">
-                       <textarea value={this.state.content} onChange={this.getContent.bind(this)}/>
+                       <textarea value={this.state.content} onChange={this.getContent.bind(this)} ref={(textarea)=>this.textarea = textarea}/>
                    </div>
                 </div>
                 <button onClick={this.submit.bind(this)}>submit</button>

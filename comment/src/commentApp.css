@@ -39,11 +39,16 @@ button{
 .commentArea {
     width: 500px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     margin-top: 10px;
 }
 .contentView{
     width: 400px;
     margin-left: 50px;
+}
+.delet{
+
+    font-size: 12px;
+    margin-left: 450px;
 }

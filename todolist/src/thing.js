@@ -5,7 +5,7 @@ class Thing extends Component{
         return(
             <div className="thing">
                 <input type="radio"/>
-                <span>完成ToDoList</span>
+                <span>{this.props.thing.thing}</span>
             </div>
         )
     }

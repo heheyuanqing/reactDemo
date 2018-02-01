@@ -5,7 +5,7 @@ class ThingList extends Component{
     render(){
         return(
             <div className="thingsList">
-                <Thing/>
+                {this.props.things.map((thing,i)=><Thing thing={thing} key={i}/>)}
             </div>
         );
     }

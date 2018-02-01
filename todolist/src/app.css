@@ -19,7 +19,8 @@
     width: 50px;
     height: 36px;
     background-color: white;
-    border: 1px solid;
+    border-color:  #FEFEFE;
+    /*border: 1px solid;*/
 }
 .thingsList{
     width: 500px;
@@ -28,17 +29,17 @@
 .thing{
     width: 400px;
     margin: 0 auto;
+    margin-top: 10px;
 }
 .thing input{
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
 }
 
 .thing span{
     width: 100px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 22px;
     vertical-align: middle;
 }

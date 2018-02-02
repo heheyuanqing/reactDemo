@@ -15,11 +15,16 @@ class TodosInput extends Component {
         }
         this.setState({thing:''});
     }
+
+    componentDidMount(){
+        this.input.focus();
+    }
+
     render() {
         return (
             <div>
                 <div className="thingInput">
-                    <input type="text" value={this.state.thing} onChange={this.getThing.bind(this)}/>
+                    <input type="text" value={this.state.thing} onChange={this.getThing.bind(this)} ref={(inputThings)=>this.input = inputThings}/>
                     <button onClick={this.onSubmit.bind(this)}>确定</button>
                 </div>
             </div>

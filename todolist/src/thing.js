@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 
 class Thing extends Component{
-   constructor(){
-       super();
-       this.state={alreadyClick:false}
-   }
+    constructor(){
+        super();
+        this.state={alreadyClick:false}
+    }
 
     handleDelete(){
         if(this.props.onDeleteThing){

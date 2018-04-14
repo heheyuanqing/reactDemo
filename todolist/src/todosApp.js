@@ -15,10 +15,10 @@ class TodoListApp extends Component {
     }
     printThings(thing) {
         if (!thing) return alert("请输入");
-      var things = this.state.things;
-      this.setState({thing});
-      things.push(thing);
-      this._saveThings(things);
+        var things = this.state.things;
+        this.setState({thing});
+        things.push(thing);
+        this._saveThings(things);
 
     }
 
@@ -32,7 +32,7 @@ class TodoListApp extends Component {
     }
 
     _saveThings(things) {
-       localStorage.setItem('things', JSON.stringify(things))
+        localStorage.setItem('things', JSON.stringify(things))
     }
 
     handleDeleteThing(index){
